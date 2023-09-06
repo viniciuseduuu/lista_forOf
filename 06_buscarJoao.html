@@ -6,9 +6,21 @@
     //Identifique todos os nomes que contém "João" em qualquer parte do nome e separe-os em uma lista. Apresente a lista ao final do programa. Considere que poderão haver "Joãos" sem ~ (til).
 
     //ENTRADA
+    const listaDeNomes = ["João Pedro", "Gabriel José", "Ulisses Joao", "Pedro Henrique", "João da Silva", "João Henrique", "Alisson João"];
+    const nomesComJoao = [];
 
     //PROCESSAMENTO
-    
+    for (const nome of listaDeNomes) {
+        if (nome.toUpperCase().includes("JOÃO") || nome.toUpperCase().includes("JOAO")) {
+            nomesComJoao.push(nome);
+        }
+    }
+
+    const resultado = `
+Nomes que contêm "João": ${nomesComJoao.join(", ")}
+`;
+
     //SAÍDA
+    alert(resultado);
 
 </script>
